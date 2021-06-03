@@ -1,0 +1,17 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+:root{
+	--primary-font : 'Pattaya', sans-serif;
+	--primary-color : #9966cc;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image: linear-gradient(180deg, #dac0f3, var(--primary-color) );
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: var(--primary-font);
+}
