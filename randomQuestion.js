@@ -1,10 +1,13 @@
 const axios = require('axios');
 
-async function getQuestions(numberOfQuestions, category, level, type) {
+
+
+module.exports.getQuestions = async function getQuestions(numberOfQuestions, category, level, type) {
   try {
+    let result;
     const response = await axios.get(`https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${level}&type=${type}`);
-    console.log(response.data);
-    console.log(JSON.stringify(response.data));
+    result = response.data;
+    return result;
   } catch (error) {
     console.error(error);
   }
@@ -44,13 +47,3 @@ level: easy, medium, hard
 type: boolean, multiple
 
 */
-
-let numberOfQuestions, category, level, type;
-
-numberOfQuestions = 3;
-category = 31;
-level= "easy";
-type = "multiple"
-
-
-getQuestions(numberOfQuestions, category, level, type);
